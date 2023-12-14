@@ -6,4 +6,5 @@ for f (${(f)"$(print -l ${ZSH_CONFIG_HOME}/source/*)"}) {
     }
 }
 
-source "${ZSH_CONFIG_HOME}/zinit.zsh"
+source ${ZSH_CONFIG_HOME}/zinit.zsh
+zsh ${ZSH_CONFIG_HOME}/motd/motd.zsh

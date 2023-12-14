@@ -30,8 +30,8 @@ local function copy_directory() {
     cp -rv $source $target
 }
 
-[[ -d ~/.config ]] || mkdir ~/.config
+[[ -d $HOME/.config ]] || mkdir $HOME/.config
 
-copy_directory $this/.config/zsh ~/.config/zsh && {
-    [[ -f ~/.zshrc ]] || ln -v -s ~/.config/zsh/zshrc.zsh ~/.zshrc
+copy_directory $this/.config/zsh $HOME/.config/zsh && {
+    [[ -f $HOME/.zshrc ]] || ln -v -s $HOME/.config/zsh/zshrc.zsh $HOME/.zshrc
 }
