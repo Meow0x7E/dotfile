@@ -32,6 +32,10 @@ local function copy_directory() {
 
 [[ -d $HOME/.config ]] || mkdir $HOME/.config
 
-copy_directory $this/.config/zsh $HOME/.config/zsh && {
-    [[ -f $HOME/.zshrc ]] || ln -v -s $HOME/.config/zsh/zshrc.zsh $HOME/.zshrc
+local target=$HOME/.config/zsh
+copy_directory $this/config/zsh $target && {
+    local t=$HOME/.zshrc
+    [[ -f $t ]] || ln -v -s $target/zshrc.zsh $t
 }
+
+copy_directory $this/config/zsh $HOME/.config/nvim
