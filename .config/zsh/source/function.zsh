@@ -1,26 +1,3 @@
-function doc-ansi() {
-    text=(
-        '字符' '名称' '默认值' '介绍'
-        'A' '光标上移' '1' '将光标向上移动 $1'
-        'B' '光标下移' '1' '将光标向下移动 $1'
-        'C' '光标右移' '1' '将光标向右移动 $1'
-        'D' '光标左移' '1' '将光标向左移动 $1'
-        'E' 'null' '1' 'null'
-        'F' '光标下行' '1' '将光标下移至 $1 行的起始'
-        'G' '光标上行' '1' '将光标上移至 $1 行的起始'
-        'H' '光标位置' '1, 1' '将光标移至第 $1 行第 $2 列，从左上角开始计数'
-        'J' '显示清空' '0' '清空部分屏幕. 0, 1, 2, 3 各有不同的功能'
-        'K' 'null' 'null' 'null'
-        'S' 'null' 'null' 'null'
-        'T' 'null' 'null' 'null'
-        's' 'null' 'null' 'null'
-        'u' 'null' 'null' 'null'
-        'f' 'null' 'null' 'null'
-        'm' 'null' 'null' 'null'
-    )
-    print -a -c -C 4 $text
-}
-
 function it-is-mine() {
     local user="$(whoami)"
     local group=":$(whoami)"
